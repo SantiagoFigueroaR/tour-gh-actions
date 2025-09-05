@@ -1,0 +1,26 @@
+name: My First Actions
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Imprimir un mensaje en la consola
+        run: echo "¡Hola desde GitHub Actions!"
+ 
+      - name: Run Script
+        run: python ./src/main.py
+
+    
