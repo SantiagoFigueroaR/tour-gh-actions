@@ -7,8 +7,8 @@ import sys
 print("Iniciando la ejecución del script...")
 
 try:
-    # URL de una API de prueba
-    url = "https://httpbin.org/get"
+    # URL de prueba actualizada a Google
+    url = "https://www.google.com"
     response = requests.get(url)
     
     # Imprime el código de estado para verificar que la solicitud fue exitosa
@@ -19,7 +19,6 @@ try:
         print("¡El script se ha ejecutado con éxito y la solicitud fue exitosa!")
     else:
         print(f"Error: La solicitud falló con el código de estado {response.status_code}")
-        # Termina el flujo de trabajo con un error si la solicitud no fue exitosa
         sys.exit(1)
 
 except requests.exceptions.RequestException as e:
