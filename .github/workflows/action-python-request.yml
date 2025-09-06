@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [3.13 , 3.12, 2.x]
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v5
